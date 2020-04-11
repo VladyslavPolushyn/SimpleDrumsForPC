@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DRUMS</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="wrapper">
+     <div class="drum kick"></div>
+     <div class="drum snare"></div>
+     <div class="drum crash"></div>
+     <div class="drum openhat"></div>
+     <div class="drum closehat"></div>
+     <div class="drum bigtom"></div>
+     <div class="drum hitom"></div>
+     <div class="drum lowtom"></div>
+     <!-- <img class="drum-img" src="drumset.jpg" alt="drums"> -->
+
+   </div>
+</body>
+
+<script>
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+
+    alert("For PC use only!")
+
+  }else {
+    let kick = new Audio("audio/kick.wav");
+    let snare = new Audio("audio/snare.mp3");
+    let crash = new Audio("audio/crash.mp3");
+    let open_hat = new Audio("audio/openhat.wav");
+    let close_hat = new Audio("audio/closehat.wav");
+    let big_tom = new Audio("audio/bigtom.wav");
+    let hi_tom = new Audio("audio/hi_tom.mp3");
+    let low_tom = new Audio("audio/lowtom.wav");
+
+    let kick_block = document.querySelector(".kick");
+    let snare_block = document.querySelector(".snare");
+    let closehat_block = document.querySelector(".closehat");
+    let crash_block = document.querySelector(".crash");
+    let lowtom_block = document.querySelector(".lowtom");
+    let hitom_block = document.querySelector(".hitom");
+    let openhat_block = document.querySelector(".openhat");
+    let bigtom_block = document.querySelector(".bigtom");
+    
+    // kick_block.onclick = function () {
+    //   kick.pause();
+    //   kick.currentTime = 0.0;
+    //   kick.play();
+    // }
+    // snare_block.onclick = function () {
+    //   snare.pause();
+    //   snare.currentTime = 0.0;
+    //   snare.play();
+    // }
+    // crash_block.onclick = function () {
+    //   crash.pause();
+    //   crash.currentTime = 0.0;
+    //   crash.play();
+    // }
+    // closehat_block.onclick = function () {
+    //   close_hat.pause();
+    //   close_hat.currentTime = 0.0;
+    //   close_hat.play();
+    // }
+    // lowtom_block.onclick = function () {
+    //   low_tom.pause();
+    //   low_tom.currentTime = 0.0;
+    //   low_tom.play();
+    // }
+    // bigtom_block.onclick = function () {
+    //   big_tom.pause();
+    //   big_tom.currentTime = 0.0;
+    //   big_tom.play();
+    // }
+    // openhat_block.onclick = function () {
+    //   open_hat.pause();
+    //   open_hat.currentTime = 0.0;
+    //   open_hat.play();
+    // }
+    // hitom_block.onclick = function () {
+    //   hi_tom.pause();
+    //   hi_tom.currentTime = 0.0;
+    //   hi_tom.play();
+    // }
+
+
+
+    document.addEventListener('keydown', function (event) {
+     if (event.code == 'Space') {
+      kick.play();
+     }
+     if (event.code == 'KeyG') {
+      snare.play();
+     }
+     if (event.code == 'KeyT') {
+      hi_tom.play();
+     }
+     if (event.code == 'KeyY') {
+      low_tom.play();
+     }
+     if (event.code == 'KeyU') {
+      big_tom.play();
+     }
+     if (event.code == 'KeyI') {
+      crash.play();
+     }
+     if (event.code == 'KeyJ') {
+      open_hat.play();
+     }
+     if (event.code == 'KeyH') {
+      close_hat.play();
+     }
+    });
+    
+    document.addEventListener('keyup', function(event) {
+     if (event.code == 'Space') {
+      kick.pause();
+      kick.currentTime = 0.0;
+     }
+     if (event.code == 'KeyG') {
+      snare.pause();
+      snare.currentTime = 0.0;
+     }
+     if (event.code == 'KeyT') {
+      hi_tom.pause();
+      hi_tom.currentTime = 0.0;
+     }
+     if (event.code == 'KeyY') {
+      low_tom.pause();
+      low_tom.currentTime = 0.0;
+     }
+     if (event.code == 'KeyU') {
+      big_tom.pause();
+      big_tom.currentTime = 0.0;
+     }
+     if (event.code == 'KeyI') {
+      crash.pause();
+      crash.currentTime = 0.0;
+     }
+     if (event.code == 'KeyJ') {
+      open_hat.pause();
+      open_hat.currentTime = 0.0;
+     }
+     if (event.code == 'KeyH') {
+      close_hat.pause();
+      close_hat.currentTime = 0.0;
+     }
+    });
+  }
+
+
+</script>
+
+</html>
