@@ -1,1 +1,1 @@
-# SimpleDrumsForPC
+# Simple Drums (for pc use)
